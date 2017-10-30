@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PartyLET.ttf">
+            <string>PartyLetPlain</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Drawing Example-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DrawingExample" customModule="ARKit_Darwing_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tw-mM-CsD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k39-hP-WgX">
+                                <rect key="frame" x="165" y="615" width="45" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="U3g-M9-3rF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="17"/>
+                                <state key="normal" title="Draw"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k39-hP-WgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="7Ih-xL-ZVD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k39-hP-WgX" secondAttribute="bottom" constant="20" id="CsS-hL-jYt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k39-hP-WgX" secondAttribute="trailing" constant="165" id="HIS-qr-hJp"/>
+                            <constraint firstItem="9tw-mM-CsD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OaF-GK-zU4"/>
+                            <constraint firstItem="9tw-mM-CsD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZzW-iW-t0b"/>
+                            <constraint firstItem="9tw-mM-CsD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eyX-y6-5Bd"/>
+                            <constraint firstItem="9tw-mM-CsD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jbs-dD-bQo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="draw" destination="k39-hP-WgX" id="BXI-op-Kde"/>
+                        <outlet property="sceneView" destination="9tw-mM-CsD" id="JtJ-Xs-dJh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
